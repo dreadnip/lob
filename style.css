@@ -13,8 +13,10 @@ body, textarea, input, button {
 }
 
 body {
-    overflow-y: scroll;
     background-color: hsl(0, 0%, 99%);
+    max-width: 60rem;
+    margin: 0 auto;
+    overflow-y: scroll;
 }
 
 a {
@@ -216,14 +218,6 @@ input.deletion {
 .totp_code::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
-}
-
-
-/* Layout */
-
-.wrap {
-    margin: 0 auto;
-    max-width: 60rem;
 }
 
 /* Header */
@@ -1160,26 +1154,6 @@ div.fieldWithErrors {
     }
     header {
         margin: 1rem;
-    }
-
-    div#wrapper {
-        padding: 0;
-        padding-bottom: 2em;
-        margin: 0;
-        min-width: 100%;
-        max-width: 100%;
-    }
-
-    div#headerleft {
-        display: inline;
-        float: none;
-    }
-    div#headerright {
-        display: inline;
-        float: none;
-        text-align: left;
-        margin-top: 0.25em;
-        clear: both;
     }
 
     .headerlinks a,
