@@ -1,0 +1,84 @@
+/*
+ * Header
+ */
+
+header {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+
+  nav {
+    flex: 1;
+  }
+
+  a {
+    font-weight: bold;
+    color: #666;
+    text-decoration: none;
+  }
+
+  a:not(:last-child) {
+    padding-right: 0.75em;
+  }
+
+  .logo {
+    background-color: #500000;
+    background-image: url(../logo.svg);
+    background-size: cover;
+    position: relative;
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 1rem;
+  }
+
+  .current {
+    color: #333;
+  }
+}
+
+
+/*
+ * Footer
+ */
+
+footer {
+  display: flex;
+  font-weight: bold;
+  padding: 1em 0 3rem 0;
+}
+
+footer a {
+  color: #666;
+  text-decoration: none;
+}
+
+.footer-nav a:not(:last-child) {
+  padding-right: 0.75em;
+}
+
+/*
+ * Pagination (in footer)
+ */
+
+.pagination {
+  flex: 1;
+}
+
+div.page_link_buttons a,
+div.page_link_buttons span {
+  border: 1px solid #d0d0d0;
+  background-color: #f3f3f3;
+  color: #666;
+  padding: 0.25em 0.5em;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 0.5em;
+}
+div.page_link_buttons a.cur,
+div.page_link_buttons span {
+  background-color: transparent;
+  border-color: transparent;
+  margin-left: 0.25em;
+  padding-right: 0.25em;
+}

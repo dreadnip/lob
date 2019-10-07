@@ -1,0 +1,27 @@
+{
+  "name": "lob",
+  "version": "0.0.1",
+  "description": "Lobste.rs example layout",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dreadnip/lob.git"
+  },
+  "author": "dreadnip",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dreadnip/lob/issues"
+  },
+  "homepage": "https://sanderdlm.be/lob",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-less": "^4.0.1",
+    "gulp-minify": "^3.1.0",
+    "lessc": "^1.0.2"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,106 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="always" />
+    <meta name="theme-color" content="#AC130D" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <title>Search | Lobsters</title>
+    <link rel="stylesheet" media="all" href="dist/main.css" />
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta name="csrf-token" content="CXNiDhD1ox3NENo05FdiLCTBVm7n5xGMEHy5FGTXnHWvZi5Jf+ASl6EE4gTGA+nLEz6QyRzYxRiCHU5LdBTUKg==" />
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div id="headerleft">
+            <a id="l_holder" style="background-color: #690000;"
+               href="index.html" title="Lobsters (Current traffic: 14%)"></a>
+
+
+            <span class="headerlinks">
+            <a href="index.html" class="">Home</a>
+            <a href="/recent" class="">Recent</a>
+            <a href="/comments" class="">Comments</a>
+            <a href="/search" class="cur_url">Search</a>
+        </span>
+        </div>
+
+        <div id="headerright">
+        <span class="headerlinks">
+            <a href="/login" class="">Login</a>
+        </span>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+
+    <div id="inside">
+
+        <div class="box">
+            <div class="legend">
+                Search
+            </div>
+
+            <form action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+                <div class="boxline">
+                    <input value="" size="40" autofocus="autofocus" type="text" name="q" id="q" />
+                    <input type="submit" value="Search">
+                </div>
+
+                <div class="boxline">
+                    <label class="required">Search:</label>
+
+                    <input type="radio" value="stories" checked="checked" name="what" id="what_stories" />
+                    <label for="what_stories" class="normal">Stories</label>
+
+                    &nbsp;
+
+                    <input type="radio" value="comments" name="what" id="what_comments" />
+                    <label for="what_comments" class="normal">Comments</label>
+
+                    <br>
+
+                    <label class="required">Order By:</label>
+
+                    <input type="radio" value="relevance" checked="checked" name="order" id="order_relevance" />
+                    <label for="order_relevance" class="normal">Relevance</label>
+
+                    &nbsp;
+
+                    <input type="radio" value="newest" name="order" id="order_newest" />
+                    <label for="order_newest" class="normal">Newest</label>
+
+                    &nbsp;
+
+                    <input type="radio" value="points" name="order" id="order_points" />
+                    <label for="order_points" class="normal">Points</label>
+                </div>
+            </form></div>
+
+        <div class="help">
+            Search by domain with <code>domain:example.com</code> and <a href="/tags">tag</a> with <code>tag:meta</code>.
+        </div>
+
+
+        <div id="footer">
+            <a href="/moderations">Moderation Log</a>
+            <a href="/hats">Hats</a>
+            <a href="https://github.com/lobsters/lobsters/wiki">Wiki</a>
+            <a href="/privacy">Privacy</a>
+            <a href="/about">About</a>
+
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+</body>
+</html>
