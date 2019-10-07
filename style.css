@@ -18,20 +18,22 @@ body {
 }
 
 a {
-    color: hsl(204, 61%, 35%);
+    color: #2562dc;
 }
 
-li.story div.details span.link a:visited {
-    color: hsl(204, 61%, 40%);
+a:visited {
+    color: #7395d9;
 }
 
 h1 {
     margin-bottom: 3.75em;
     font-size: 1.2rem;
 }
+
 h2 {
     font-size: 11pt;
 }
+
 ul {
     list-style: none;
 }
@@ -217,58 +219,96 @@ input.deletion {
 }
 
 
-/* outliners */
+/* Layout */
 
-main {
+.wrap {
     margin: 0 auto;
-    padding-bottom: 2em;
-    max-width: 960px;
+    max-width: 60rem;
 }
-
-
-/* header */
+svg {
+    -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+    filter: invert(100%);
+}
+/* Header */
 
 header {
     display: flex;
-    font-weight: bold;
-    padding: 2rem;
+    align-items: center;
+    margin: 1.5rem 0;
 }
 
-#l_holder {
-    background-position: center;
+.logo {
+    background-color: #500000;
+    background-image: url(logo.svg);
+    background-size: cover;
+    position: relative;
     display: block;
-    width: 1rem;
-    height: 1rem;
-    padding: 1px;
+    width: 1.2rem;
+    height: 1.2rem;
     margin-right: 1rem;
-}
-
-header a {
-    color: #333;
-    text-decoration: none;
-    padding-right: 0.75em;
 }
 
 header nav {
     flex: 1;
 }
 
-/* footer */
-
-div#footer {
-    float: right;
+header a {
     font-weight: bold;
-    margin-top: 1.5em;
-    padding-right: 10px;
-}
-div#footer a {
-    color: #999;
+    color: #666;
     text-decoration: none;
-    padding-left: 0.75em;
 }
 
+header a:not(:last-child) {
+    padding-right: 0.75em;
+}
 
-/* other specifics */
+.cur_url {
+    color: #333;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    font-weight: bold;
+    padding: 1em 0 3rem 0;
+}
+
+footer a {
+    color: #666;
+    text-decoration: none;
+}
+
+.footer-nav a:not(:last-child) {
+    padding-right: 0.75em;
+}
+
+/* Pagination (in footer) */
+
+.pagination {
+    flex: 1;
+}
+
+div.page_link_buttons a,
+div.page_link_buttons span {
+    border: 1px solid #d0d0d0;
+    background-color: #f3f3f3;
+    color: #666;
+    padding: 0.25em 0.5em;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 0.5em;
+}
+div.page_link_buttons a.cur,
+div.page_link_buttons span {
+    background-color: transparent;
+    border-color: transparent;
+    margin-left: 0.25em;
+    padding-right: 0.25em;
+}
+
+/* Avatars */
+
 div#gravatar {
     border: 2px solid #fff;
     border-radius: 100% 100%;
@@ -287,108 +327,58 @@ div#gravatar img {
     margin-top: 2em;
 }
 
-/* stories */
+/* Story list */
 
-ol.stories,
-ol.comments,
-ol.search_results {
-    padding: 0;
-    list-style: none;
-    margin: 0;
-}
-
-ol.comments {
-    margin-left: 20px;
-    margin-bottom: 0em;
-    padding-left: 6px;
-}
-ol.comments1 {
-    margin-left: -20px;
-    padding-left: 0;
-}
-ol.comments.comments1 {
-    border-left-color: transparent;
-}
-ol.comments1 > li.comments_subtree {
-    margin-left: 11px;
+.story {
+    display: flex;
+    padding-bottom: .50rem;
+    margin: .25rem 0 0 0;
+    border-bottom: solid 1px #e8e8e8;
 }
 
-ol.search_results {
-    margin-left: 20px;
-    margin-bottom: 0em;
-    padding-left: 6px;
+/* Voting */
+
+.votes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
 }
 
-ol.search_results li.story {
-    padding-bottom: 0.75em;
-}
-
-div.voters {
-    float: left;
-    margin-top: 0px;
-    width: 40px;
-}
-
-div.voters div.score {
-    color: #aaa;
-    font-size: 9pt;
-    margin-top: 1px;
-    margin-bottom: -3px;
+.score {
+    color: #666;
+    font-size: .8rem;
     text-align: center;
 }
 
-li.story div.voters div.score {
-    font-size: 9.5pt;
-    margin-top: 2px;
-}
-
-div.voters .upvoter,
-div.voters .downvoter {
-    border-color: transparent transparent #bbb transparent;
-    border-style: solid;
-    border-width: 6px;
-    text-decoration: none;
-    width: 0px;
+.upvote, .downvote {
+    width: 0;
     height: 0;
-    margin-bottom: 0px;
-    margin-left: 14px;
-    padding: 0;
-    display: block;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
 }
 
-div.voters .upvoter:hover,
-.upvoted div.voters .upvoter {
+.upvote {
+    border-bottom: 12px solid #a1a1a1;
+}
+
+.upvote:hover {
     border-bottom-color: #ac130d;
 }
 
-div.voters .upvoter {
-    border-bottom-width: 11px;
+.downvote {
+    border-top: 10px solid #666;
 }
-
-div.voters .downvoter {
-    border-color: #bbb transparent transparent transparent;
-    border-width: 5px;
-    margin-top: 4px;
-    margin-left: 15px;
-    margin-bottom: -5px;
-    border-top-width: 9px;
-}
-div.voters .downvoter:hover,
-.downvoted div.voters .downvoter {
+.votes .downvoter:hover,
+.downvoted .votes .downvoter {
     border-top-color: gray;
 }
 
-div.voters .downvoter.downvoter_stub {
+.votes .downvoter.downvoter_stub {
     border-color: transparent;
 }
 
-li.story {
-    clear: both;
-}
-ol.stories li.story div.story_liner {
-    padding-top: 0.25em;
-    padding-bottom: 0.25em;
-}
 .comment {
     clear: both;
     padding-top: 0.4em;
@@ -399,13 +389,6 @@ ol.stories li.story div.story_liner {
 
 .comment a {
     color: #666;
-}
-
-ol.stories li:first-child div.story_liner {
-    padding-top: 0.5em;
-}
-li div.details {
-    padding-top: 0.1em;
 }
 
 .negative_1 {
@@ -427,13 +410,8 @@ li div.details {
     border-radius: 20px;
 }
 
-li .link {
+.story .link {
     font-weight: bold;
-    vertical-align: middle;
-}
-
-li .link a {
-    font-size: 11.5pt;
     text-decoration: none;
 }
 
@@ -444,20 +422,16 @@ li.story .description_present {
     vertical-align: middle;
 }
 
-li.story a.tag, #leader a.tag {
-    vertical-align: middle;
+.tags {
+    display: inline-block;
+    margin: 0 0.25em;
 }
 
-li .tags {
-    margin-right: 0.25em;
-}
-
-li .domain {
-    color: #888;
+.domain {
+    color: #666;
     font-style: italic;
-    font-size: 9pt;
+    font-size: .8rem;
     text-decoration: none;
-    vertical-align: middle;
 }
 
 .merge {
@@ -503,7 +477,7 @@ li .comment_folder_button:checked ~ .comment .comment_folder:before {
 li .comment_folder_button:checked ~ div.comment div.comment_text {
     display: none;
 }
-li .comment_folder_button:checked ~ div.comment div.voters {
+li .comment_folder_button:checked ~ div.comment .votes {
     visibility: hidden;
     margin-bottom: -15px;
 }
@@ -546,35 +520,38 @@ li:last-child > .comment_siblings_tree_line {
 
 /* try to force a highlighted comment to stay visible */
 div.comment:target div.comment_text,
-div.comment:target div.voters {
+div.comment:target .votes {
     display: block !important;
 }
 
-li .byline {
-    color: #888;
-    font-size: 9.5pt;
+/* Byline */
+
+.byline {
+    display: flex;
+    font-size: .8rem;
+    color: #666;
+    margin-top: .3rem;
 }
-li .byline > img.avatar {
-    margin-bottom: -5px;
+
+.byline > *:not(:last-child) {
+    margin-right: .3rem;
 }
-li .byline img.avatar {
-    border-radius: 8px;
-    height: 16px;
-    margin-bottom: 2px;
-    margin-right: 2px;
-    vertical-align: middle;
-    width: 16px;
+
+.byline .avatar-link {
+    height: 1.2rem;
 }
-li.story .byline {
-    margin-top: 1px;
+
+.byline .avatar {
+    border-radius: 50%;
+    max-height: 1.2rem;
+    width: auto;
 }
-li.story span.byline {
-    margin-left: 0.5em;
-}
-li .byline a {
-    color: #888;
+
+.byline a {
     text-decoration: none;
+    color: #666;
 }
+
 /* preserve selection made elsewhere when clicking */
 li .byline a.comment_replier {
     -moz-user-select: none;
@@ -592,8 +569,7 @@ li .byline a.inactive_user {
     color: gray;
     text-decoration: line-through;
 }
-span.user_is_author, a.user_is_author,
-li .byline a.user_is_author {
+.author {
     color: #6081bd;
 }
 li .byline a.story_has_suggestions {
@@ -617,12 +593,6 @@ li.story.expired a {
     color: gray !important;
 }
 
-li div.details,
-div.story_content {
-    margin-left: 40px;
-    margin-right: 40px;
-}
-
 div.story_content {
     margin-bottom: 1em;
 }
@@ -634,42 +604,7 @@ ol.stories.list div.story_content {
     text-overflow: clip;
 }
 
-div.morelink {
-    float: left;
-}
-
-div.morelink,
-div.page_link_buttons {
-    margin-top: 1.5em;
-    margin-left: 40px;
-}
-div.morelink a {
-    color: #666;
-    font-weight: bold;
-    text-decoration: none;
-}
-div.page_link_buttons {
-    font-weight: bold;
-    margin-top: 2em;
-}
-div.page_link_buttons a,
-div.page_link_buttons span {
-    border: 1px solid #d0d0d0;
-    background-color: #f3f3f3;
-    color: #666;
-    padding: 0.25em 0.5em;
-    font-weight: bold;
-    text-decoration: none;
-    margin-left: 0.5em;
-}
-div.page_link_buttons a.cur,
-div.page_link_buttons span {
-    background-color: transparent;
-    border-color: transparent;
-    margin-left: 0.25em;
-    padding-right: 0.25em;
-}
-
+/* Stories */
 
 div.story_text {
     margin-bottom: 1.5em;
@@ -1221,25 +1156,13 @@ div.fieldWithErrors {
     text-decoration: none;
     vertical-align: middle;
 }
-@media only screen and (max-width: 480px) {
-    html {
-        -webkit-text-size-adjust: none;
-    }
+@media only screen and (max-width: 30rem) {
 
     body {
-        margin: 0;
-        padding: 0;
+        font-size: .8rem;
     }
-
-    div#header,
-    div#leader {
-        margin: 0;
-        padding: 8px 5px;
-        background-color: #eee;
-        border-bottom: 1px solid #ccc;
-    }
-    div#leader {
-        padding: 8px;
+    header {
+        margin: 1rem;
     }
 
     div#wrapper {
@@ -1268,7 +1191,7 @@ div.fieldWithErrors {
         padding-left: 0;
     }
 
-    div#inside {
+    .content {
         margin: 0;
     }
 
@@ -1311,12 +1234,12 @@ div.fieldWithErrors {
         border-left-color: transparent;
     }
 
-    div.voters {
+    .votes {
         margin-left: 0.25em;
         margin-top: 0px;
         width: 31px;
     }
-    div.voters a.upvoter {
+    .votes a.upvoter {
         margin-top: -5px;
     }
 
@@ -1328,18 +1251,18 @@ div.fieldWithErrors {
         margin-left: 35px;
     }
 
-    div.voters a.upvoter,
-    div.voters a.downvoter {
+    .votes a.upvoter,
+    .votes a.downvoter {
         margin-left: 6px;
         border-width: 9px;
     }
 
     /* explicitly reset color when not upvoted, since previously-upvoted arrow
      * will still be triggering :hover until next tap */
-    div.voters .upvoter:hover {
+    .votes .upvoter:hover {
         border-bottom-color: #bbb;
     }
-    .upvoted div.voters .upvoter {
+    .upvoted .votes .upvoter {
         border-bottom-color: #ac130d;
     }
 
@@ -1349,14 +1272,9 @@ div.fieldWithErrors {
 
     ol.stories.list li.story {
         border-bottom: 1px solid #e0e0e0;
-        display: table;
     }
     ol.stories.list li.story div.story_liner {
-        background-color: #fbfbfb;
-        display: table-cell;
-        padding-top: 0.5em;
-        padding-bottom: 0.75em;
-        width: 100%;
+
     }
     ol.stories.list li.story .mobile_comments {
         background-color: #e8e8e8;
@@ -1427,16 +1345,10 @@ div.fieldWithErrors {
         display: none;
     }
 
-
-    li div.details,
-    div.story_content {
-        margin-left: 36px;
-        margin-right: 20px;
-    }
     ol.stories.list div.story_content {
         margin-right: 0;
     }
-    div.morelink {
+    div.pagination {
         margin-left: 36px;
         float: none;
     }
@@ -1489,7 +1401,7 @@ div.fieldWithErrors {
         margin-left: 0;
     }
 
-    div#footer {
+    footer {
         text-align: center;
         float: none;
     }
@@ -1513,19 +1425,6 @@ span.hat_sysop {
 }
 span.hat_sysop span.crown {
     background-color: #ddc7c7;
-}
-
-#l_holder {
-    position: relative;
-}
-#l_holder:after {
-    content: '';
-    background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAZiS0dEAL0ALQAtZF7+HAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wCCBAuLt2rqugAAACMSURBVDjL1ZMxCsJQEERfRPEk9im9mGfxBpaCnaXmBraeQEidKsKz2eIb/peEIOLAwu4Ws7PMbsUAKlOwYCaWmd4aWCV1B4yXpR59R61SitwKDdBHfgPaSTsF8zOmHz5NLykAeCRqvuvCfxGcgP0YF3ZqHy7c1Yt6jfo8dCF3idvkQjcRRVQ/f6bZBC+RBoeZnlCyqwAAAABJRU5ErkJggg==) no-repeat center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
 }
 
 @media
