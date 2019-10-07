@@ -18,32 +18,17 @@
     <meta name="csrf-token" content="CXNiDhD1ox3NENo05FdiLCTBVm7n5xGMEHy5FGTXnHWvZi5Jf+ASl6EE4gTGA+nLEz6QyRzYxRiCHU5LdBTUKg==" />
 </head>
 <body>
-<div id="wrapper">
-    <div id="header">
-        <div id="headerleft">
-            <a id="l_holder" style="background-color: #690000;"
-               href="index.html" title="Lobsters (Current traffic: 14%)"></a>
-
-
-            <span class="headerlinks">
-            <a href="index.html" class="">Home</a>
+    <header>
+        <a class="logo" href="index.html" title="Lobsters (Current traffic: 3%)"></a>
+        <nav>
+            <a href="/" class="current">Lobsters</a>
             <a href="/recent" class="">Recent</a>
             <a href="/comments" class="">Comments</a>
-            <a href="/search" class="cur_url">Search</a>
-        </span>
-        </div>
-
-        <div id="headerright">
-        <span class="headerlinks">
-            <a href="/login" class="">Login</a>
-        </span>
-        </div>
-
-        <div class="clear"></div>
-    </div>
-
-
-    <div id="inside">
+            <a href="search.html" class="">Search</a>
+        </nav>
+        <a href="/login" class="">Login</a>
+    </header>
+    <main class="content">
 
         <div class="box">
             <div class="legend">
@@ -89,18 +74,18 @@
         <div class="help">
             Search by domain with <code>domain:example.com</code> and <a href="/tags">tag</a> with <code>tag:meta</code>.
         </div>
-
-
-        <div id="footer">
+    </main>
+    <footer>
+        <div class="pagination">
+            <a href="/page/2">Go to page 2</a>
+        </div>
+        <div class="footer-nav">
             <a href="/moderations">Moderation Log</a>
             <a href="/hats">Hats</a>
             <a href="https://github.com/lobsters/lobsters/wiki">Wiki</a>
             <a href="/privacy">Privacy</a>
             <a href="/about">About</a>
-
         </div>
-        <div class="clear"></div>
-    </div>
-</div>
+    </footer>
 </body>
 </html>
