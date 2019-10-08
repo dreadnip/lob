@@ -20,18 +20,27 @@
     margin-bottom: 1rem;
   }
 
-  .stories .comments {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
-
+  /*
+   * This is a tricky one. First off, we hide the "comments" string that is displayed on the desktop view.
+   * After that we we make the comment link an absolutely position flex container with the number centered
+   * on both the x and y axis. Finally we negate the .content padding on the right by applying a negative
+   * `right` position of 1rem. This gives the user a very comfortable tap target.
+   */
   .stories .comments span {
     display: none;
   }
+  .stories .comments {
+    position: absolute;
+    top: 0;
+    right: -1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 3rem;
+  }
+
+
 
   //TODO
   .comment {
@@ -82,105 +91,6 @@
     border-bottom-color: #ac130d;
   }
 
-  ol.stories.list {
-    margin-top: 0;
-  }
-
-  ol.stories.list li.story {
-    border-bottom: 1px solid #e0e0e0;
-  }
-  ol.stories.list li.story div.story_liner {
-
-  }
-  ol.stories.list li.story .mobile_comments {
-    background-color: #e8e8e8;
-    display: table-cell !important;
-    font-size: 11pt;
-    min-width: 40px;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-  }
-  ol.stories.list li.story .mobile_comments span:before {
-    border-style: solid;
-    border-width: 0px 6px 3px 0px;
-    border-color: #ccc;
-    border-bottom-right-radius: 13px;
-    bottom: -10px;
-    content: "";
-    display: block;
-    height: 7px;
-    left: 4px;
-    position: absolute;
-    width: 5px;
-    z-index: 10;
-  }
-  ol.stories.list li.story .mobile_comments span:after {
-    border-bottom-right-radius: 10px;
-    border-color: #ccc;
-    border-style: solid;
-    border-width: 0px 3px 3px 0px;
-    bottom: -10px;
-    content: "";
-    display: block;
-    height: 7px;
-    left: 5px;
-    position: absolute;
-    width: 10px;
-    z-index: 10;
-  }
-  ol.stories.list li.story .mobile_comments span {
-    background-color: #ccc;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    color: #333;
-    display: block;
-    font-size: 9pt;
-    margin: 0 0.5em;
-    padding: 2px;
-    position: relative;
-    text-align: center;
-  }
-  ol.stories.list li.story .mobile_comments:active span,
-  ol.stories.list li.story .mobile_comments:focus span {
-    outline: 0;
-  }
-  ol.stories.list li.story .mobile_comments.zero span {
-    color: gray;
-  }
-  ol.stories.list li.story .mobile_comments.zero span {
-    background-color: #d8d8d8;
-    color: #999;
-  }
-  ol.stories.list li.story .mobile_comments.zero span,
-  ol.stories.list li.story .mobile_comments.zero span:before,
-  ol.stories.list li.story .mobile_comments.zero span:after {
-    border-color: #d8d8d8;
-  }
-  ol.stories.list li.story .comments_label {
-    display: none;
-  }
-
-  ol.stories.list div.story_content {
-    margin-right: 0;
-  }
-
-  div.box label,
-  div.boxline label {
-    display: block;
-    width: 100% !important;
-  }
-  div.box div.d,
-  div.box.wide div.d {
-    margin-left: 0;
-  }
-
-  div.boxline textarea,
-  div.boxline input[type="text"],
-  div.comment textarea {
-    max-width: 90%;
-  }
-
   div.markdown_help_label {
     display: none;
   }
@@ -208,10 +118,5 @@
 
   div#user_about {
     margin-left: 0;
-  }
-
-  footer {
-    text-align: center;
-    float: none;
   }
 }
