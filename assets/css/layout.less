@@ -39,7 +39,6 @@ header {
   }
 }
 
-
 /*
  * Footer
  */
@@ -47,22 +46,21 @@ header {
 footer {
   display: flex;
   font-weight: bold;
-  padding: 1em 0 3rem 0;
+  margin: 1em 0 3rem 0;
+
+  a {
+    color: @medium-gray;
+    text-decoration: none;
+  }
+
+  .pagination {
+    flex: 1;
+  }
+
+  .footer-nav a:not(:last-child) {
+    padding-right: 0.75em;
+  }
 }
 
-footer a {
-  color: @medium-gray;
-  text-decoration: none;
-}
 
-.footer-nav a:not(:last-child) {
-  padding-right: 0.75em;
-}
 
-/*
- * Pagination (in footer)
- */
-
-.pagination {
-  flex: 1;
-}
