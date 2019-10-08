@@ -1,4 +1,4 @@
-
+@import "colors";
 @import "layout";
 @import "forms";
 @import "mobile";
@@ -10,15 +10,12 @@
   -webkit-font-smoothing: antialiased;
 }
 
-body, textarea, input, button {
+body {
   font-family: Helvetica Neue, arial, sans-serif;
-  font-size: 1rem;
+  background-color: @off-white;
   color: @dark-gray;
   line-height: 1.5;
-}
-
-body {
-  background-color: @off-white;
+  font-size: 1rem;
   max-width: 60rem;
   margin: 0 auto;
   overflow-y: scroll;
@@ -26,19 +23,6 @@ body {
 
 a {
   color: @blue;
-}
-
-a:visited {
-  color: @light-blue;
-}
-
-h1 {
-  margin-bottom: 3.75em;
-  font-size: 1.2rem;
-}
-
-h2 {
-  font-size: 11pt;
 }
 
 ul {
@@ -85,8 +69,15 @@ div#gravatar img {
   width: 100px;
 }
 
-.help {
-  margin-top: 2em;
+.info {
+  display: inline-block;
+  background-color: #e8e8e8;
+  padding: .5rem 1rem;
+  border-left: solid 3px #ccc;
+}
+
+code {
+
 }
 
 /* Story list */
@@ -141,6 +132,10 @@ div#gravatar img {
   border-color: transparent;
 }
 
+.details {
+  position: relative;
+}
+
 .comment {
   clear: both;
   padding-top: 0.4em;
@@ -175,6 +170,10 @@ div#gravatar img {
 .story .link {
   font-weight: bold;
   text-decoration: none;
+}
+
+.story .link:visited {
+  color: @light-blue;
 }
 
 li.story .description_present {
@@ -691,105 +690,12 @@ table.data pre {
 }
 
 
-/* boxes */
-.box {
-  border: 0;
-  margin: 0 40px;
-  padding: 0;
-}
+/* Content */
 
-.box .legend {
+.content h1 {
+  font-size: 1rem;
   margin-bottom: 1em;
-  padding: 0;
-  font-weight: bold;
-  font-size: 11pt;
 }
-.box .sublegend {
-  font-size: 9.5pt;
-  font-weight: normal;
-  font-style: italic;
-  color: gray;
-}
-.box .legend.right {
-  float: right;
-}
-
-.box label {
-  display: block;
-  float: left;
-  margin-bottom: 4px;
-}
-
-.box label.required {
-  font-weight: bold;
-}
-.box img {
-  vertical-align: middle;
-}
-.box label,
-.box span,
-.box select,
-.box br {
-  line-height: 2em;
-}
-.box br {
-  clear: left;
-}
-.box .boxline {
-  clear: both;
-  margin-bottom: 0.5em;
-}
-.box p {
-  margin-top: 1em;
-}
-
-.box textarea {
-  margin-bottom: 4px;
-  width: 75%;
-}
-
-.box label {
-  width: 7em;
-  line-height: 2em;
-  vertical-align: middle;
-}
-.box div.d {
-  margin-left: 7em;
-}
-
-.box input.normal,
-.box label.normal {
-  display: inline;
-  float: none;
-  vertical-align: middle;
-}
-
-.box span.d label,
-.box td label,
-.box .legend label,
-.box div.d label {
-  display: inline;
-  float: none;
-  vertical-align: baseline;
-}
-
-.box span.d a.tag {
-  vertical-align: middle;
-}
-
-.hint {
-  color: gray;
-  font-style: italic;
-  margin-left: 1em;
-}
-
-.box.wide label {
-  width: 12em;
-}
-.box.wide div.d {
-  margin-left: 12em;
-}
-
 
 /* for flash_notices() and flash_errors() */
 

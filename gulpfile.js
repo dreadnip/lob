@@ -1,8 +1,7 @@
-const { src, dest, parallel } = require('gulp');
+const { src, dest, watch, series } = require('gulp');
 const less = require('gulp-less');
 const minifyCSS = require('gulp-csso');
 const concat = require('gulp-concat');
-const minify = require('gulp-minify');
 
 function css() {
     return src('assets/css/*.less')
@@ -12,5 +11,6 @@ function css() {
         .pipe(dest('dist'))
 }
 
-exports.css = css;
-exports.default = css;
+exports.default = function() {
+    watch('assets/css/*.less', css);
+};

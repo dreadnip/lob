@@ -30,50 +30,42 @@
     </header>
     <main class="content">
 
-        <div class="box">
-            <div class="legend">
-                Search
-            </div>
+            <h1>Search</h1>
 
-            <form action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-                <div class="boxline">
-                    <input value="" size="40" autofocus="autofocus" type="text" name="q" id="q" />
+            <form action="/search" accept-charset="UTF-8" method="get">
+                <input name="utf8" type="hidden" value="&#x2713;" />
+
+                <div class="form-group">
+                    <input value="" autofocus="autofocus" type="text" name="q" id="q" />
                     <input type="submit" value="Search">
                 </div>
 
-                <div class="boxline">
-                    <label class="required">Search:</label>
+                <div class="form-group">
+                    <label class="label">Search:</label>
 
                     <input type="radio" value="stories" checked="checked" name="what" id="what_stories" />
-                    <label for="what_stories" class="normal">Stories</label>
-
-                    &nbsp;
+                    <label for="what_stories">Stories</label>
 
                     <input type="radio" value="comments" name="what" id="what_comments" />
-                    <label for="what_comments" class="normal">Comments</label>
+                    <label for="what_comments">Comments</label>
 
-                    <br>
+                </div>
 
-                    <label class="required">Order By:</label>
+                <div class="form-group">
+                    <label class="label">Order By:</label>
 
                     <input type="radio" value="relevance" checked="checked" name="order" id="order_relevance" />
-                    <label for="order_relevance" class="normal">Relevance</label>
-
-                    &nbsp;
+                    <label for="order_relevance">Relevance</label>
 
                     <input type="radio" value="newest" name="order" id="order_newest" />
-                    <label for="order_newest" class="normal">Newest</label>
-
-                    &nbsp;
+                    <label for="order_newest">Newest</label>
 
                     <input type="radio" value="points" name="order" id="order_points" />
-                    <label for="order_points" class="normal">Points</label>
+                    <label for="order_points">Points</label>
                 </div>
-            </form></div>
+            </form>
 
-        <div class="help">
-            Search by domain with <code>domain:example.com</code> and <a href="/tags">tag</a> with <code>tag:meta</code>.
-        </div>
+            <p class="info">Tip: search by domain with <code>domain:example.com</code> and <a href="/tags">tag</a> with <code>tag:meta</code>.</p>
     </main>
     <footer>
         <div class="pagination">

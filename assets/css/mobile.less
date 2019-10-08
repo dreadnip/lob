@@ -3,28 +3,37 @@
   body {
     font-size: .8rem;
   }
+
   header {
     margin: 1rem;
   }
 
-  .headerlinks a,
-  #headerright .headerlinks a {
-    padding-right: 0.25em;
-    padding-left: 0;
-  }
-
   .content {
-    margin: 0;
+    padding: 0 1rem;
   }
 
-  .help, .box {
-    margin: 0 8px;
+  footer {
+    flex-direction: column;
   }
 
-  div.legend {
-    margin-top: 0.5em;
+  .pagination {
+    margin-bottom: 1rem;
   }
 
+  .stories .comments {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .stories .comments span {
+    display: none;
+  }
+
+  //TODO
   .comment {
     padding-left: 0;
   }
@@ -56,27 +65,12 @@
     border-left-color: transparent;
   }
 
-  .votes {
-    margin-left: 0.25em;
-    margin-top: 0px;
-    width: 31px;
-  }
-  .votes a.upvoter {
-    margin-top: -5px;
-  }
-
   div.comment_form_container {
     margin-left: 0;
   }
 
   div.comment_form_container form {
     margin-left: 35px;
-  }
-
-  .votes a.upvoter,
-  .votes a.downvoter {
-    margin-left: 6px;
-    border-width: 9px;
   }
 
   /* explicitly reset color when not upvoted, since previously-upvoted arrow
@@ -169,13 +163,6 @@
 
   ol.stories.list div.story_content {
     margin-right: 0;
-  }
-  div.pagination {
-    margin-left: 36px;
-    float: none;
-  }
-  li.story div.byline {
-    font-size: 10pt;
   }
 
   div.box label,
