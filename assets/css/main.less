@@ -13,7 +13,7 @@
 body {
   font-family: Helvetica Neue, arial, sans-serif;
   background-color: @off-white;
-  color: @dark-gray;
+  color: @gray;
   line-height: 1.5;
   font-size: 1rem;
   max-width: 60rem;
@@ -28,6 +28,19 @@ a {
 ul {
   list-style: none;
 }
+
+h2 {
+  font-size: 1rem;
+  display: inline;
+}
+
+.domain, .comments, .author, .cache-link {
+  color: @gray;
+}
+
+
+
+
 
 
 span.hat {
@@ -84,7 +97,15 @@ code {
 
 .story {
   display: flex;
-  padding-bottom: .50rem;
+  /*
+   * This is a small flexbox hack to "fix" the tab order of the story elements.
+   * By reversing the order and then alligning to flex-end, we can place the votes container
+   * -after- the details but still get the visual effect of the votes being on the left.
+   * This way when a 
+   */
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  padding-bottom: .5rem;
   margin: .25rem 0 0 0;
   border-bottom: solid 1px #e8e8e8;
 }
@@ -100,7 +121,6 @@ code {
 }
 
 .score {
-  color: #666;
   font-size: .8rem;
   text-align: center;
 }
@@ -121,7 +141,7 @@ code {
 }
 
 .downvote {
-  border-top: 10px solid #666;
+  border-top: 10px solid @gray;
 }
 .votes .downvoter:hover,
 .downvoted .votes .downvoter {
@@ -142,10 +162,6 @@ code {
   padding-bottom: 0.4em;
   padding-left: 20px;
   position: relative;
-}
-
-.comment a {
-  color: #666;
 }
 
 .negative_1 {
@@ -193,7 +209,7 @@ li.story .description_present {
   background-color: #EEE7DF;
   box-shadow: 1px 1px #efefef;
   border-radius: 5px;
-  color: #333;
+  color: @dark-gray;
   font-size: .75rem;
   padding: .1rem .4rem;
   text-decoration: none;
@@ -210,7 +226,6 @@ li.story .description_present {
 }
 
 .domain {
-  color: #666;
   font-style: italic;
   font-size: .8rem;
   text-decoration: none;
@@ -311,7 +326,6 @@ div.comment:target .votes {
 .byline {
   display: flex;
   font-size: .8rem;
-  color: #666;
   margin-top: .3rem;
 }
 
@@ -331,7 +345,6 @@ div.comment:target .votes {
 
 .byline a {
   text-decoration: none;
-  color: #666;
 }
 
 /* preserve selection made elsewhere when clicking */
@@ -350,12 +363,6 @@ span.inactive_user, a.inactive_user,
 li .byline a.inactive_user {
   color: gray;
   text-decoration: line-through;
-}
-.author {
-  color: #6081bd;
-}
-li .byline a.story_has_suggestions {
-  color: #6081bd;
 }
 
 li.story.hidden {
@@ -876,3 +883,26 @@ only screen and (-webkit-min-device-pixel-ratio: 2) {
     background-position: 1px 1px;
   }
 }
+/*
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: @deep-blue;
+    color: @teal;
+  }
+  h1, h2 {
+    color: @off-white;
+  }
+  a {
+    color: @yellow;
+  }
+  a:visited {
+    color: @light-yellow;
+  }
+  .domain, .comments, .author, .cache-link {
+    color: @teal;
+  }
+  .story {
+    border-bottom: solid 1px @teal;
+  }
+}
+*/
