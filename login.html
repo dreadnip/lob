@@ -30,32 +30,31 @@
         <a href="login.html" class="">Login</a>
     </header>
     <main>
-        <ul class="stories">
-            <li class="story" data-shortid="wds7ri">
-                <div class="details">
-                    <a class="link u-url" href="#">Example title</a>
-                    <ul class="tags">
-                        <li><a class="tag tag_devops" href="/t/devops">devops</a></li>
-                        <li><a class="tag tag_networking" href="/t/networking">networking</a></li>
-                    </ul>
-                    <a class="domain" href="/search?order=newest&amp;q=domain:x">webapps.stackexchange.com</a>
-                    <div class="byline">
-                        <a class="avatar-link" href="/u/user">
-                            <img srcset="avatar.png 1x" class="avatar" alt="example avatar" src="avatar.png" />
-                        </a>
-                        <span>authored by</span>
-                        <a href="/u/user" class="author" aria-label="author profile">username</a>
-                        <span title="2019-10-03 23:31:00 -0500">7 hours ago</span>
-                        <a class="cache-link" href="#" rel="nofollow" target="_blank">cached</a>
-                        <a class="comments" href="/s/xxxxxx">8 <span>comments</span></a>
-                    </div>
-                </div>
-                <div class="votes">
-                    <a class="upvote" href="/login" aria-label="upvote this story"></a>
-                    <span class="score" aria-label="story upvotes">38</span>
-                </div>
-            </li>
-        </ul>
+        <h1>Login</h1>
+        <form action="/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="tZ3TUlGrp3iz3kPCxSUVBcAE1mgzwXifaIBjy3l4S3FfLon3nZU8PH/6mnwXN/h419SCpeFHmE0uPPgQB9Qc7g==" />
+            <div class="form-row">
+                <label for="email">E-mail or Username:</label>
+                <input autofocus="autofocus" type="text" name="email" id="email" />
+            </div>
+            <div class="form-row">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" />
+            </div>
+            <div class="form-row">
+                <input type="submit" name="commit" value="Login" data-disable-with="Login" />
+            </div>
+            <input value="https://lobste.rs/about" type="hidden" name="referer" id="referer" />
+        </form>
+        <p>
+            Forgot your password or deleted your account?
+            <a href="/login/forgot_password">Reset your password</a>.
+        </p>
+        <p>
+            Not a user yet?  Signup is by invitation only to combat spam and increase
+            accountability.  If you know <a href="/u/">a current user</a> of the site,
+            ask them for an invitation or
+            request one in <a href="/chat">chat</a>.
+        </p>
     </main>
     <footer>
         <section class="pagination">
@@ -71,3 +70,4 @@
     </footer>
 </body>
 </html>
+

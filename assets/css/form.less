@@ -44,12 +44,27 @@ button:focus {
   display: inline-block;
   min-width: 5rem;
 }
-.form-group {
-  margin-bottom: 1rem;
-}
-.form-group > input {
+
+form {
 
 }
+
+form > * + * {
+  padding: 1rem 0;
+}
+
+.form-row {
+  display: flex;
+}
+
+.form-row label {
+  min-width: 10rem;
+}
+
+.form-row input {
+
+}
+
 //TODO
 
 ::-webkit-input-placeholder {

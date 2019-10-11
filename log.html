@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="always" />
+    <meta name="theme-color" content="#AC130D" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>Lobsters</title>
+    <link rel="stylesheet" media="all" href="dist/main.css" />
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta name="csrf-token" content="rCDYMRUnfLh13cU2HK99n6fUn27FQhUskcIJcyXBGxoKNZR2ejLNMhnJ/QY++/Z4kCtZyT59wbgDo/4sNQJTRQ==" />
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/rss" />
+    <link rel="alternate" type="application/rss+xml" title="Comments - RSS 2.0" href="/comments.rss" />
+</head>
+<body>
+    <header>
+        <a class="logo" href="index.html" title="Lobsters (Current traffic: 3%)" aria-label="home"></a>
+        <nav>
+            <a href="index.html" class="current">Home</a>
+            <a href="recent" class="">Recent</a>
+            <a href="comments" class="">Comments</a>
+            <a href="search.html" class="">Search</a>
+        </nav>
+        <a href="login.html" class="">Login</a>
+    </header>
+    <main>
+        <h1>Moderation Log</h1>
+                <form class="log-form" action="/moderations" accept-charset="UTF-8" method="get">
+                    <input name="utf8" type="hidden" value="&#x2713;" />
+                    <label class="normal" for="moderator">Moderator:</label>
+                    <select name="moderator" id="moderator"><option selected="selected" value="(All)">(All)</option>
+                        <option value="(Users)">(Users)</option>
+                        <option value="jcs">jcs</option>
+                        <option value="kyle">kyle</option>
+                        <option value="pushcx">pushcx</option>
+                        <option value="Irene">Irene</option>
+                        <option value="alynpost">alynpost</option></select>
+                    <input type="checkbox" name="what[stories]" id="what_stories" value="stories" checked="checked" />
+                    <label class="normal" for="what_stories">Stories</label>
+                    <input type="checkbox" name="what[comments]" id="what_comments" value="comments" checked="checked" />
+                    <label class="normal" for="what_comments">Comments</label>
+                    <input type="checkbox" name="what[tags]" id="what_tags" value="tags" checked="checked" />
+                    <label class="normal" for="what_tags">Tags</label>
+                    <input type="checkbox" name="what[users]" id="what_users" value="users" checked="checked" />
+                    <label class="normal" for="what_users">Users</label>
+
+                    <input type="submit" value="Filter">
+                </form>
+
+                <table class="log">
+                    <tr>
+                        <th>Date/Time</th>
+                        <th>Moderator</th>
+                        <th>Subject</th>
+                        <th>Action</th>
+                        <th>Reason</th>
+                    </tr>
+                    <tr>
+                        <td>2019-10-11&nbsp;05:10</td>
+                        <td>(Users)</td>
+                        <td><a href="/u/kai_nyasha">User: kai_nyasha</a></td>
+                        <td>Changed own username from &quot;kaishh&quot; to &quot;kai_nyasha&quot;</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <td>2019-10-11&nbsp;05:10</td>
+                        <td>(Users)</td>
+                        <td><a href="/u/kai_nyasha">User: kai_nyasha</a></td>
+                        <td>Changed title from &quot;DNS over HTTPS (and all its friends &amp; relations) (2019)&quot; to &quot;DNS over HTTPS (and all its friends &amp; relations)&quot;</td>
+                        <td>/</td>
+                    </tr>
+                </table>
+    </main>
+    <footer>
+        <section class="pagination">
+            <a href="/page/2">Go to page 2</a>
+        </section>
+        <ul class="footer-nav">
+            <a href="log.html">Moderation Log</a>
+            <a href="/hats">Hats</a>
+            <a href="https://github.com/lobsters/lobsters/wiki">Wiki</a>
+            <a href="/privacy">Privacy</a>
+            <a href="about.html">About</a>
+        </ul>
+    </footer>
+</body>
+</html>

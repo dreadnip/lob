@@ -85,8 +85,12 @@ li.story .description_present {
 }
 
 .tags {
+  display: inline;
+}
+
+.tags li {
   display: inline-block;
-  margin: 0 0.25em;
+
 }
 
 
@@ -124,4 +128,30 @@ li.story .description_present {
   padding-right: 2px;
   display: inline-block;
   vertical-align: middle;
+}
+
+/* Byline */
+
+.byline {
+  display: flex;
+  font-size: .8rem;
+  margin-top: .3rem;
+}
+
+.byline > *:not(:last-child) {
+  margin-right: .3rem;
+}
+
+.byline .avatar-link {
+  height: 1.2rem;
+}
+
+.byline .avatar {
+  border-radius: 50%;
+  max-height: 1.2rem;
+  width: auto;
+}
+
+.byline a {
+  text-decoration: none;
 }

@@ -19,14 +19,14 @@
 </head>
 <body>
     <header>
-        <a class="logo" href="index.html" title="Lobsters (Current traffic: 3%)"></a>
+        <a class="logo" href="index.html" title="Lobsters (Current traffic: 3%)" aria-label="home"></a>
         <nav>
-            <a href="/index.html" class="current">Lobsters</a>
-            <a href="/recent" class="">Recent</a>
-            <a href="/comments" class="">Comments</a>
+            <a href="index.html" class="current">Home</a>
+            <a href="recent" class="">Recent</a>
+            <a href="comments" class="">Comments</a>
             <a href="search.html" class="">Search</a>
         </nav>
-        <a href="/login" class="">Login</a>
+        <a href="login.html" class="">Login</a>
     </header>
     <main class="content">
 
@@ -35,12 +35,12 @@
             <form action="/search" accept-charset="UTF-8" method="get">
                 <input name="utf8" type="hidden" value="&#x2713;" />
 
-                <div class="form-group">
+                <div class="form-row">
                     <input value="" autofocus="autofocus" type="text" name="q" id="q" />
                     <input type="submit" value="Search">
                 </div>
 
-                <div class="form-group">
+                <div class="form-row">
                     <label class="label">Search:</label>
 
                     <input type="radio" value="stories" checked="checked" name="what" id="what_stories" />
@@ -51,7 +51,7 @@
 
                 </div>
 
-                <div class="form-group">
+                <div class="form-row">
                     <label class="label">Order By:</label>
 
                     <input type="radio" value="relevance" checked="checked" name="order" id="order_relevance" />
@@ -68,16 +68,16 @@
             <p class="info">Tip: search by domain with <code>domain:example.com</code> and <a href="/tags">tag</a> with <code>tag:meta</code>.</p>
     </main>
     <footer>
-        <div class="pagination">
+        <section class="pagination">
             <a href="/page/2">Go to page 2</a>
-        </div>
-        <div class="footer-nav">
-            <a href="/moderations">Moderation Log</a>
+        </section>
+        <ul class="footer-nav">
+            <a href="log.html">Moderation Log</a>
             <a href="/hats">Hats</a>
             <a href="https://github.com/lobsters/lobsters/wiki">Wiki</a>
             <a href="/privacy">Privacy</a>
-            <a href="/about">About</a>
-        </div>
+            <a href="about.html">About</a>
+        </ul>
     </footer>
 </body>
 </html>

@@ -40,13 +40,18 @@ header {
 
 /*
  * Content
+ *
+ * Text is a content class that implies the main will mostly contain formatted text.
  */
 
-.content {
-  h1 {
-    font-size: 1rem;
-    margin-bottom: 1em;
-  }
+.text * + * {
+  margin-top: 1rem;
+}
+
+.text ul {
+  // Re-apply a basic list style for text lists
+  list-style: square;
+  margin-left: 2rem;
 }
 
 /*
