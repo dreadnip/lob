@@ -6,7 +6,7 @@ This is a HTML snapshot of http://lobste.rs that I'm using to refactor their HTM
 * More readable
 * More usable
 
-website; with *as little visual changes as possible*.
+website; with **as little visual changes as possible**.
 
 Ideally I'd work straight onto a fork of their main repo bur I'm not a Ruby dev and I didn't want to set up an entire Ruby dev env for this purpose.
 
