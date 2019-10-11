@@ -5,6 +5,7 @@
 @import "form";
 @import "mobile";
 
+// Start with a basic, global reset
 * {
   margin: 0;
   padding: 0;
@@ -20,11 +21,15 @@ body {
   font-size: 1rem;
   max-width: 60rem;
   margin: 0 auto;
-  overflow-y: scroll;
+  overflow-y: scroll; //Show scrollbar by default for a better UX
 }
 
 a {
   color: @blue;
+}
+
+a:visited {
+  color: @light-blue;
 }
 
 ul {
@@ -37,6 +42,18 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   max-width: 40rem;
+  margin-top: 1rem;
+}
+
+p + p {
+  margin-top: 1rem;
+}
+
+blockquote, .info {
+  display: inline-block;
+  background-color: @gray-accent;
+  padding: .5rem 1rem;
+  border-left: solid 3px #ccc;
 }
 
 .domain, .comments, .author, .cache-link {
@@ -83,13 +100,6 @@ div#gravatar img {
   border-radius: 50px;
   height: 100px;
   width: 100px;
-}
-
-.info, blockquote {
-  display: inline-block;
-  background-color: @gray-accent;
-  padding: .5rem 1rem;
-  border-left: solid 3px #ccc;
 }
 
 li input.comment_folder_button {
