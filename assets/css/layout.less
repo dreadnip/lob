@@ -1,4 +1,4 @@
-@import "colors";
+@import "color";
 
 /*
  * Header
@@ -19,15 +19,14 @@ header {
     text-decoration: none;
   }
 
-  a:not(:last-child) {
-    padding-right: 0.75em;
+  nav * + * {
+    margin-left: 1em;
   }
 
   .logo {
     background-color: #500000;
     background-image: url(../logo.svg);
     background-size: cover;
-    position: relative;
     display: block;
     width: 1.2rem;
     height: 1.2rem;
@@ -36,6 +35,17 @@ header {
 
   .current {
     color: @dark-gray;
+  }
+}
+
+/*
+ * Content
+ */
+
+.content {
+  h1 {
+    font-size: 1rem;
+    margin-bottom: 1em;
   }
 }
 
